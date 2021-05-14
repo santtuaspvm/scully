@@ -99,9 +99,9 @@ ${yellow('------------------------------------------------------------')}`
       );
       writeFileSync(scullyStatsFilePath, JSON.stringify(scullyStats, undefined, 4));
     }
-    if (!watch) {
-      process.exit(0);
-    }
+  //  if (!watch) {  //this is done too early, servers don't get ramped down
+  //    process.exit(0);
+  //  }
   });
 };
 
