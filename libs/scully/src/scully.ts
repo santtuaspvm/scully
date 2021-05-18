@@ -168,7 +168,15 @@ You are using "${yellow(scullyConfig.hostUrl)}" as server.
         });
       }
       /** done, stop the program */
-      process.exit(0);
+      setTimeout(()=>{
+        try{
+            console.log('killing process');
+            process.exit(0);
+        }
+        catch(err){
+            console.log('error killing process:', err);
+        }
+    },5000)
     }
   }
 })();
